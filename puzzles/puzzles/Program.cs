@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace puzzles
 {
@@ -15,8 +16,14 @@ namespace puzzles
                 Console.WriteLine(randNums[i]);
             }
 
+            Console.WriteLine("Max: " + randNums.Max());
+            Console.WriteLine("Min: " + randNums.Min());
+            Console.WriteLine("Sum: " + randNums.Sum());
+
             return randNums;
         }
+
+       
 
         static void Main(string[] args)
         {
