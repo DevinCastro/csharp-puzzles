@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Collections.Generic;
 
 namespace puzzles
 {
@@ -73,10 +74,32 @@ namespace puzzles
 
         }
        
+        public static List<string> Names()
+        {
+            List<string> names = new List<string>();
+            List<string> randList = new List<string>();
+            Random rand = new Random();
+            names.Add("Todd");
+            names.Add("Tiffany");
+            names.Add("Charlie");
+            names.Add("Geneva");
+            names.Add("Sydney");
+
+            for (int i = 0; i < names.Count; i++)
+            {
+                randList.Add(names[rand.Next(0, 5)]);
+                Console.WriteLine(randList[i]);
+            }
+
+            return randList;
+        }
+
+
 
         static void Main(string[] args)
         {
-            Console.WriteLine(TossMultipleCoins(5000));
+            Names();
+            // Console.WriteLine(TossMultipleCoins(500));
             // RandomArray();
             Console.ReadLine();
         }
